@@ -1,0 +1,750 @@
+/*------------------------------------------------------------------
+    IMPORT FONTS
+-------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900');
+
+/*------------------------------------------------------------------
+    IMPORT FILES
+-------------------------------------------------------------------*/
+
+@import url(animate.css);
+@import url(font-awesome.min.css);
+@import url(superslides.css);
+@import url(baguetteBox.min.css);
+
+/*------------------------------------------------------------------
+    SKELETON
+-------------------------------------------------------------------*/
+
+body {
+    color: #666666;
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.80857;
+}
+
+
+a {
+    color: black;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+    font-weight: normal;
+    position: relative;
+    padding: 0 0 10px 0;
+    font-weight: normal;
+    line-height: 120% !important;
+    color: black;
+    margin: 0
+}
+.vid1 .vid2 .vid3 .vid4{
+    
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+     display: none;    }
+
+h1 {
+    font-size: 24px
+}
+
+h2 {
+    font-size: 22px
+}
+
+h3 {
+    font-size: 18px
+}
+
+h4 {
+    font-size: 16px
+}
+
+h5 {
+    font-size: 14px
+}
+
+h6 {
+    font-size: 13px
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #212121;
+    text-decoration: none!important;
+    opacity: 1
+}
+
+
+
+a {
+    color: #1f1f1f;
+    text-decoration: none;
+    outline: none;
+}
+
+a,
+.btn {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-custom {
+    margin-top: 20px;
+    background-color: transparent !important;
+    border: 2px solid #ddd;
+    padding: 12px 40px;
+    font-size: 16px;
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 30px;
+    color: hsl(0, 0%, 1%);
+    margin: 0;
+    padding: 0;
+}
+
+blockquote {
+    margin: 20px 0 20px;
+    padding: 30px;
+}
+
+
+button:focus{
+	outline: none;
+}
+
+.form-control::-moz-placeholder {
+    color: black;
+    opacity: 1;
+}
+
+/*------------------------------------------------------------------
+    LOADER 
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+    HEADER
+-------------------------------------------------------------------*/
+.top-navbar{
+	position: relative;
+	z-index: 10;
+}
+
+.top-navbar .navbar{
+	padding: 15px 0px;
+	position: fixed;
+	width: 100%;
+	border-radius: 0px 0px 100px 100px;
+	transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+	z-index: 100;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-link{
+	color: black;
+	font-size: 18px;
+	padding: 10px 20px;
+	border-radius: 4px;
+	text-transform: uppercase;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover{
+    background-image: linear-gradient(to right,#f8b421, #ffffff);
+
+   /*background-image: linear-gradient(to right, #ebb542 , rgb(219, 212, 179));
+  background-image: linear-gradient(to right, rgb(179, 130, 51) , rgb(211, 198, 140));*/
+	color: #ffffff;
+    border-radius: 20px;
+
+}
+.top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link{
+	background: #f8b421;
+	color: black;
+	border-radius: 20px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+	padding: 10px;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu a{
+	padding: 10px 10px;
+	text-transform: uppercase;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu a.dropdown-item:hover{
+	background: #f8b421;
+	color: #ffffff;
+}
+.navbar-light .navbar-toggler:hover{
+	background: #f8b421;
+}
+
+/*------------------------------------------------------------------
+    Slider
+-------------------------------------------------------------------*/
+
+.cover-slides{
+	height: 100vh;
+}
+.slides-navigation a {
+	background: #f8b421;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    font-size: 20px;
+    display: block;
+    color: #fff;
+	border-radius: 4px;
+	line-height: 63px;
+	text-align: center;
+    transition: all .3s ease-in-out;
+}
+.slides-navigation a i{
+	font-size: 40px;
+}
+.slides-navigation a:hover {
+	background: black;
+}
+.cover-slides .container{
+	height: 100%;
+	position: relative;
+	z-index: 2;
+}
+.cover-slides .container > .row {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    height: 100%;
+
+}
+
+.btn{
+	text-transform: uppercase;
+	padding: 20px 36px;
+}
+.btn{
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 2px solid transparent;
+	padding: 12px 30px;
+	font-size: 20px;
+	line-height: 1.5;
+	border-radius: 30px;
+    transition: 2s;
+}
+.btn-outline-new-white {
+    color: #fff;
+    background-image: linear-gradient(to right, #f8b421,#fff);
+    border-color: #ebb542;
+}
+.btn-outline-new-white:hover {
+    color: #ffffff;
+    
+    background-image: linear-gradient(to right,#f8b421, #f8b421);
+    border-color: #ebb542;
+}
+
+.overlay-background {
+    background: #333;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+	opacity: 0.5;
+}
+
+.cover-slides h1{
+    font-family: Georgia, serif;
+	font-weight: bolder;
+	font-size: 64px;
+	color: rgb(206, 180, 180);
+    text-shadow: .3rem .2rem .3rem black;
+}
+.cover-slides p{
+    font-family: 'Times New Roman', serif;
+	font-size: 24px;
+	color: #fff;
+    text-shadow: 4px black;
+    margin: 12px 0px;
+
+}
+.slides-pagination a{
+	border: 2px solid rgb(206, 180, 180);
+}
+.slides-pagination a.current{
+	background: rgb(206, 180, 180);
+	border: 2px solid rgb(206, 180, 180);
+}
+/*
+------------------------------------------------------------------
+    About
+-------------------------------------------------------------------*/
+
+.about-section-box{
+	padding: 70px 40px;
+	background: #ffffff url(../images/rest29.jpg );
+	background-size:cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.buble{
+display: inline;
+align-items: center;
+margin-top:350px;
+}
+@keyframes buble{
+    0%{
+        transform: translateY(10);
+        opacity: 10%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    70%{
+        opacity: 80%;
+    }
+    100%{
+        transform: translateY(-100vh);
+
+        opacity: 0;
+    }
+}
+
+
+.inner-column{
+    padding-top: 90px;
+    padding-right: 80px;
+	text-align: left;
+}
+.inner-column h1{
+	font-size: 30px;
+	color: #f8b421;
+	font-weight:800;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inner-column h1 span{
+	color:rgb(206, 180, 180);
+    font-weight:700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inner-column h4{
+	font-size: 16px;
+	font-weight: 500;
+    font-family: 'Brush Script MT', cursive;
+    color:#f8b421 ;
+    font-size: 30px;
+
+
+}
+.inner-column p{
+	font-size: 18px;
+	color: #fff;
+}
+.inner-column .btn-outline-new-white{
+	color: #fff;
+}
+.inner-column .btn-outline-new-white:hover{
+	color: #ffffff;
+}
+
+/*------------------------------------------------------------------
+reservation
+-------------------------------------------------------------------*/
+
+
+.reservation{
+	background: url(../images/res.jpg) no-repeat;
+	background-size: cover;
+	padding: 100px 0;
+	background-attachment: fixed;
+	background-position: center center;
+	position: relative;
+}
+.reservation p {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 44px;
+    color: rgb(0, 0, 0);
+	margin-bottom: 20px;
+}
+
+.reservation span {
+    color: rgb(8, 8, 8);
+    font-size: 28px;  
+	font-weight: 500;	
+}
+
+/*------------------------------------------------------------------
+    Menu
+-------------------------------------------------------------------*/
+
+.menu-box{
+	padding: 70px 0px;
+}
+
+.heading-title{
+	margin-bottom: 50px;
+}
+.heading-title h2{
+	color: black;
+	font-size: 28px;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 500;
+}
+.heading-title p{
+	font-size: 18px;
+	font-weight: 200;
+	margin: 0px;
+}
+
+.inner-menu-box .nav-pills .nav-link.active{
+	background: #f8b421;
+}
+.inner-menu-box .nav-pills .nav-link{
+	font-size: 18px;
+}
+.inner-menu-box .nav-pills .nav-link:hover{
+	background: #f8b421;
+	color: #ffffff;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------
+    Contact info
+-------------------------------------------------------------------*/
+
+.contact-info-box{
+    background-color:#f8b421;
+	padding: 40px ;
+}
+
+
+.contact-info-box i{
+	display: block;
+	float: left;
+	width: 80px;
+	height: 55px;
+	line-height: 60px;
+	text-align: center;
+	background: #fff;
+	color: #f8b421;
+	font-size: 35px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	margin-right: 20px;
+}
+.contact-info-box h4 {
+    margin-top: 5px;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 450;
+	line-height: 24px;
+}
+.contact-info-box p {
+	color: #ffffff;
+	font-weight: 250;
+}
+
+/*------------------------------------------------------------------
+    Footer
+-------------------------------------------------------------------*/
+
+.footer-area{
+	padding-top: 50px;
+	padding-bottom: 0px;
+}
+.bg-f{
+	background-attachment: scroll;
+	background-clip: initial;
+	background-origin: initial;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.bg-f::before {
+    background: white;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+	opacity: 0.8;
+}
+
+.footer-area .container{
+	position: relative;
+	z-index: 1;
+}
+.footer-area h3{
+	color: black;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 500;
+	border-bottom: 2px solid rgba(228, 224, 220, 0.5);
+	margin-bottom: 10px;
+}
+.footer-area p{
+	font-size: 15px;
+	color: black;
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+.footer-area p.lead{
+	font-size: 19px;
+	color: black;
+	margin-bottom: 0px;
+}
+.footer-area p.lead a{
+	color: black;
+	margin-bottom: 15px;
+}
+.footer-area p.lead a:hover{
+	color: #f8b421;
+}
+.footer-area p a{
+	font-size: 18px;
+	color: black;
+}
+.footer-area p a:hover{
+	color: #f8b421;
+}
+
+.subscribe_form {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.subscribe_form .form_input {
+    display: block;
+    background-color: rgba(0,0,0,0.9);
+	border: 1px solid #ffffff;
+    color: #fff;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 10px;
+    float: left;
+	font-weight: 300;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.subscribe_form .submit {
+    background-color: #f8b421;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0 10px;
+    width: 100%;
+	border: none;
+    transition: all 0.5s ease-in-out;
+}
+.subscribe_form .submit:hover{
+	background: black;
+}
+
+.f-social {
+    padding-bottom: 10px;
+    margin: 0px;
+    margin-top: 20px;
+    background-color:white;
+}
+.f-social li a{
+    font-size: 18px;
+    color: #f8b421;
+	width: 40px;
+	height: 38px;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 4px;
+    margin-left: 12px;
+}
+
+/*Reserevation Page*/
+
+
+/*------------------------------------------------------------------
+    All Pages
+-------------------------------------------------------------------*/
+
+.page-breadcrumb {
+    background: url(../images/slider-03.jpg) no-repeat;
+    padding: 250px 0 150px;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+.all-page-title .container{
+	position: relative;
+	z-index: 2;
+}
+.all-page-title::before{
+	background: #010101;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	opacity: 0.8;	
+}
+.all-page-title h1{
+	font-size: 38px;
+	color: #ffffff;
+	font-family: 'Rubik', sans-serif;
+	padding: 0px;
+	font-weight: 500;
+}
+
+.inner-pt{
+	margin-top: 30px;
+}
+.inner-pt p{
+	font-size: 18px;
+}
+
+
+.reservation-box{
+	padding: 70px 0px;
+}
+
+.reservation-box h3{
+	padding: 0px 15px;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+
+.contact-box{
+	padding: 70px 0px;
+}
+
+
+
+/*           Biiil*/
+
+.Bill{
+    background-image: linear-gradient(to right,#f8b421, #fff);
+    font-size: 14px;
+}
+.Bill:hover{
+    background-image: linear-gradient(to right,#f8b421, #f8b421);
+}
+
+/* Menu nav*/
+.menuNav{
+font-size: 20px;
+color:#f8b421;
+text-decoration: none;
+}
+
+.menuNav:hover{
+    background-image: linear-gradient(to right,#f8b421, #f8b421);
+color:#fff;
+font-size: 23px;
+}
+.b{
+    background-color: rgb(206, 180, 180);
+    padding: 8px;
+    color:#fff;
+    margin-bottom: 10px;
+    position: relative;
+    left: 50px;
+    border: white solid 2px;
+
+
+}
+.b:hover{
+    background-image: linear-gradient(to right,#f8b421, #f8b421);
+    color: #fff;
+    border: black solid 2px;
+
+}
+.btnContat{
+    width:140px;
+    margin:25px;
+    height: 40px;
+    color:black;
+    background-image:  linear-gradient(to right,#f8b421,white);
+}
+
+.btnContat:hover{
+
+    background-image: linear-gradient(to right,#f8b421, #f8b421);
+    color:white;
+
+
+}
+.LocSentence{
+    color:black;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 45px;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

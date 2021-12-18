@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>N&N Restaurant</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+   
+</head>
+
+<body>
+	<!-- Start header -->
+	<header class="top-navbar" >
+		<nav class="navbar navbar-expand-lg navbar-light ">
+			<div class="container">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-rs-food" style="display: inline-block;  float: none;  vertical-align: top;">
+					<ul class="navbar-nav ml-md-3" style="text-align: center;">
+						<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="reservation.html">Book a Table</a></li>
+						<li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="TotalBill.html">Add an Order</a></li>
+					
+						<li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<!-- Start All Pages -->
+	<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Total Bill</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End All Pages -->
+	
+
+	<!-- End blog -->
+	
+<!--Bill info-->
+<div class="row rowclass" style="padding-left: 120px;" >
+	<div class="col-lg-8">
+		<h1 style="text-decoration: underline;"><strong>Items:</strong></h1>
+
+		<div class="row">
+	<!-- Start First Row -->
+<div class="col-lg-2 text-dark " style="font-size: 16px;"><strong>Product</strong></div>
+<div class="col-lg-1 text-dark " style="font-size: 16px;"><strong>Price</strong></div>
+<div class="col-lg-1 text-dark " style="font-size: 16px;"><strong>Quantity</strong></div>
+<div class="col-lg-4 text-dark " style="font-size: 16px;"><strong>Performed Action</strong> </div>
+</div>
+	<!-- Start second Row -->
+<div class="row">
+	
+		<div class="col-lg-2" style="background-color:rgb(206, 180, 180); color:white; font-size: 15px;">Meal</div>
+		<div class="col-lg-1"><script> var Mealprix='50' ;document.write(Mealprix+"$")</script></div>
+		<div class="col-lg-1"><input type="number" min="1" id="MealQty"></div>
+		<div class="col-lg-4"><button id='addMeal'class="Bill">Add</button><button id='removeMeal'class="Bill">Remove</button></div>
+</div>
+	<!-- Start third Row -->
+
+<div class="row">
+	<div class="col-lg-2" style="font-size: 15px;" >Cold Drink</div>
+	<div class="col-lg-1"><script> var CDrinkprix='20' ;document.write(CDrinkprix+"$")</script></div>
+	<div class="col-lg-1"><input type="number" min="1" id="CDrinkQty"></div>
+	<div class="col-lg-4"><button id='addCDrink'class="Bill">Add</button><button id='removeCDrink'class="Bill">Remove</button></div>
+</div>
+	<!-- Start third Row -->
+<div class="row">
+	<div class="col-lg-2" style="background-color:rgb(206, 180, 180); font-size: 15px;color: white;";  >Hot Drink</div>
+	<div class="col-lg-1"><script> var HDrinkprix='22' ;document.write(HDrinkprix+"$")</script></div>
+	<div class="col-lg-1"><input type="number" min="1" id="HDrinkQty"></div>
+	<div class="col-lg-4"><button id='addHDrink' class="Bill">Add</button><button id='removeHDrink' class="Bill">Remove</button></div>
+</div>
+	<!-- Start fourth Row -->
+<div class="row">
+	<div class="col-lg-2" style="font-size: 15px;">Cake</div>
+	<div class="col-lg-1"><script> var Cakeprix='28' ;document.write(Cakeprix+"$")</script></div>
+	<div class="col-lg-1"><input type="number" min="1" id="CakeQty"></div>
+	<div class="col-lg-4"><button id='addCake' class="Bill">Add</button><button id='removeCake' class="Bill">Remove</button></div>
+</div>
+</div>
+
+<div class="col-lg-4">
+	<h1 style="text-decoration: underline;"><strong>Total Bill:</strong></h1>
+		
+	
+			<div style="background-color:rgb(206, 180, 180); color:white ;font-size: 35px;" id="sumtest"></div>
+		
+<div id="sumtest"></div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	var sum=0;
+	var items='';
+	$(document).ready(function(){
+$("#addMeal").click(function(){
+var MealQty=document.getElementById('MealQty').value;
+sum+=(MealQty*Mealprix);
+$("#sumtest").text("total= "+sum+"$");
+});
+$("#removeMeal").click(function(){
+var MealQty=document.getElementById('MealQty').value;
+MealQty-=1;
+if(MealQty>=0){
+	$("#MealQty").val(MealQty);
+sum=sum-Mealprix;
+$("#sumtest").text("total= "+sum+"$");
+}
+else{
+	MealQty=0;
+}
+
+});
+/////////////////////////////////////////////////////////////////
+$("#addCDrink").click(function(){
+var CDrinkQty=document.getElementById('CDrinkQty').value;
+sum+=(CDrinkQty*CDrinkprix);
+$("#sumtest").text("total= "+sum+"$");
+});
+$("#removeCDrink").click(function(){
+var CDrinkQty=document.getElementById('CDrinkQty').value;
+CDrinkQty-=1;
+if(CDrinkQty>=0){
+$("#CDrinkQty").val(CDrinkQty);
+sum=sum-CDrinkprix;
+$("#sumtest").text("total= "+sum+"$");}
+else{CDrinkQty=0;
+}
+
+});
+///////////////////////////////////////////////
+$("#addHDrink").click(function(){
+var HDrinkQty=document.getElementById('HDrinkQty').value;
+sum+=(HDrinkQty*HDrinkprix);
+$("#sumtest").text("total= "+sum+"$");
+});
+$("#removeHDrink").click(function(){
+var HDrinkQty=document.getElementById('HDrinkQty').value;
+HDrinkQty-=1;
+if(HDrinkQty>=0){
+	$("#HDrinkQty").val(HDrinkQty);
+sum=sum-HDrinkprix;
+$("#sumtest").text("total= "+sum+"$");
+}
+else{
+	HDrinkQty=0;
+}
+
+});
+/////////////////////////////////////////////////
+$("#addCake").click(function(){
+var CakeQty=document.getElementById('CakeQty').value;
+sum+=(CakeQty*Cakeprix);
+$("#sumtest").text("total= "+sum+"$");
+});
+$("#removeCake").click(function(){
+var CakeQty=document.getElementById('CakeQty').value;
+CakeQty-=1;
+if(CakeQty>=0){
+	$("#CakeQty").val(CakeQty);
+sum=sum-Cakeprix;
+$("#sumtest").text("total= "+sum+"$");
+}
+else{
+	CakeQty=0;
+}
+
+});
+	});
+</script>
+</div>
+<!--end col 4-->
+
+</div>	
+
+	<!-- End Footer -->
+	
+
+	<!-- ALL JS FILES -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+	
+	<script src="js/jquery.superslides.min.js"></script>
+	<script src="js/images-loded.min.js"></script>
+	<script src="js/isotope.min.js"></script>
+	<script src="js/baguetteBox.min.js"></script>
+	<script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+</body>
+</html>
