@@ -2,7 +2,7 @@
 Front-end of a restaurant website using HTML/CSS/BOOTSTRAP/JQUERY
 # Home Page ####
 <img src='WebsiteImage/Screenshot (194).png'>
-<img src='Screenshot (200).png'>
+<img src='WebsiteImage/Screenshot (200).png'>
 
 # Contact Us ####
 <img src='WebsiteImage/Screenshot (193).png'>
